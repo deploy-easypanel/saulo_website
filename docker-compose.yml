@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: website.saulojustiniano
+    ports:
+      - '3030:3030'
+    restart: unless-stopped
