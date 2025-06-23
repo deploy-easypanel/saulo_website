@@ -151,7 +151,7 @@ export default function HomePage() {
           {/* Imagem com esfera atrás */}
           <div className="relative flex justify-center z-10">
             {/* Esfera (círculo grande laranja) */}
-            <div className="absolute -top-20 md:top-0 right-20 md:right-25 md:left-80 w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-zinc-200 rounded-full z-0"></div>
+            <div className="absolute -top-20 md:top-0 right-20 md:right-25 md:left-80 md:w-[700px] md:h-[700px] bg-zinc-200 rounded-full z-0"></div>
 
             {/* Imagem do programador */}
             <Image
