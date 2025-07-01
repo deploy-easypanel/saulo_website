@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: website.saulojustiniano
+    container_name: saulo_website
     ports:
       - '3030:3030'
     restart: unless-stopped
