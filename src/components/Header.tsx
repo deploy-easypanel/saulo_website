@@ -29,6 +29,7 @@ export default function Header() {
             {item}
           </a>
         ))}
+        <a href="https://curriculo.saulojustiniano.site">Currículo</a>
       </nav>
 
       <button
