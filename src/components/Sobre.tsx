@@ -2,7 +2,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 import Image from 'next/image';
 
@@ -10,13 +9,7 @@ export default function SobreSection() {
   return (
     <section id="sobre" className="scroll-mt-20 py-20 px-6 md:px-28 bg-gray-50">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="w-full flex justify-center mb-8 md:mb-0"
-        >
+        <div className="w-full flex justify-center mb-8 md:mb-0">
           <Image
             src="/profile.png"
             alt="Foto de perfil"
@@ -25,15 +18,9 @@ export default function SobreSection() {
             sizes="(max-width: 768px) 100vw, 400px"
             className="h-auto object-cover rounded-2xl shadow-lg"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="max-w-xl mx-auto md:mx-0"
-        >
+        <div className="max-w-xl mx-auto md:mx-0">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Sobre mim</h2>
           <p className="text-base text-gray-700 mb-6 leading-relaxed">
             Sou um desenvolvedor apaixonado por criar soluções inovadoras e
@@ -68,7 +55,7 @@ export default function SobreSection() {
               Ver meu portfólio
             </Button>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
