@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
 
       <div className="relative flex justify-center z-10">
-        <div className="absolute -top-20 md:-top-70 -right-50 md:right-25 md:left-80 md:w-[700px] md:h-[700px] bg-zinc-200 rounded-full z-0"></div>
+        <div className="absolute -top-20 md:-top-70 -right-50 md:right-25 md:left-50 md:w-[700px] md:h-[700px] bg-zinc-200 rounded-full z-0"></div>
         <div className="absolute -top-40 md:-top-30 -right-50 md:right-25 md:left-0 md:w-[400px] md:h-[400px] bg-zinc-300 rounded-full z-0"></div>
         <Image
           src="/bg.svg"
