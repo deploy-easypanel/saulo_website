@@ -15,7 +15,6 @@ export default function SobreSection() {
             alt="Foto de perfil"
             width={400}
             height={400}
-            sizes="(max-width: 768px) 100vw, 400px"
             className="h-auto object-cover rounded-2xl shadow-lg"
           />
         </div>
