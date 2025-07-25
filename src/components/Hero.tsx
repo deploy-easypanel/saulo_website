@@ -12,9 +12,12 @@ export default function Hero() {
         <p className="text-base text-gray-600 mb-6">
           Seja bem-vindo ao meu website
         </p>
-        <Button className="px-6 py-2 text-white bg-gray-900 rounded hover:bg-gray-800">
-          Saiba mais sobre mim
-        </Button>
+        <a href="#sobre">
+          <Button className="px-6 py-2 text-white bg-gray-900 rounded hover:bg-gray-800">
+            Saiba mais sobre mim
+          </Button>
+        </a>
+
         <div className="flex justify-center md:justify-start gap-4 mt-6">
           <a href="https://github.com/saulojustiniano1" target="_blank">
             <Github className="w-6 h-6 text-gray-700 hover:text-black" />
