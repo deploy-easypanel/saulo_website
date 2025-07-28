@@ -41,6 +41,9 @@ export default function Contato() {
 
   return (
     <section id="contato" className="scroll-mt-20 py-20 px-6 md:px-28 bg-white">
+      <h4 className="flex justify-center items-center text-red-600">
+        EM DESENVOLVIMENTO - NÃO ESTÁ FUNCIONANDO
+      </h4>
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900">Entre em Contato</h2>
         <p className="text-gray-600 mt-4 text-lg">
