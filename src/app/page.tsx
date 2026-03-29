@@ -1,5 +1,3 @@
-'use client';
-
 import ContatoSection from '@/components/Contato';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';

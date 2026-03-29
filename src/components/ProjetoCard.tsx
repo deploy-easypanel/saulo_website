@@ -1,4 +1,4 @@
-import { Code, Github, Globe, Wrench } from 'lucide-react';
+import { Github, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 type ProjetoCardProps = {
@@ -19,57 +19,57 @@ export default function ProjetoCard({
   link,
 }: ProjetoCardProps) {
   return (
-    <div className="bg-white shadow-md rounded-xl overflow-hidden flex flex-col w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105">
-      <div className="relative w-full h-48">
+    <div className="group relative bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-400">
+      {/* Image with zoom + hover overlay */}
+      <div className="relative h-56 overflow-hidden bg-gray-100">
         <Image
           src={imagem}
           alt={`Imagem do projeto ${nome}`}
-          width={400}
-          height={240}
-          className="h-full w-full object-cover"
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-700"
+          sizes="(max-width: 768px) 100vw, 400px"
         />
-      </div>
-      <div className="p-4 flex flex-col justify-between flex-1">
-        <div>
-          <h3 className="text-xl font-semibold mb-2">{nome}</h3>
-          <p className="text-gray-600 mb-3 text-sm">{descricao}</p>
-
-          <div className="flex items-center gap-2 mb-2">
-            <Code className="w-4 h-4 text-blue-600" />
-            <Image
-              src={linguagem.icone}
-              alt={linguagem.nome}
-              width={16}
-              height={16}
-            />
-            <span className="text-xs">{linguagem.nome}</span>
-          </div>
-
-          <div className="flex items-center gap-2 mb-3 flex-wrap">
-            <Wrench className="w-4 h-4 text-gray-700" />
-            {ferramentas.map((f, i) => (
-              <div key={i} className="flex items-center gap-1 mr-2 mb-1">
-                <Image src={f.icone} alt={f.nome} width={16} height={16} />
-                <span className="text-xs">{f.nome}</span>
-              </div>
-            ))}
+        {/* Overlay with links — slides up on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+          <div className="flex gap-3 translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-blue-600 text-gray-900 text-sm font-semibold px-4 py-2 rounded-xl hover:bg-blue-500 transition-colors"
+            >
+              <Globe className="w-3.5 h-3.5" /> Ver Projeto
+            </a>
+            <a
+              href="https://github.com/saulojustiniano1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-white/15 text-white text-sm px-4 py-2 rounded-xl hover:bg-white/25 transition-colors border border-white/20 backdrop-blur-sm"
+            >
+              <Github className="w-3.5 h-3.5" /> GitHub
+            </a>
           </div>
         </div>
-        <div className="mt-2 flex gap-4">
-          <a
-            href={link}
-            target="_blank"
-            className="inline-flex items-center gap-2 text-white bg-gray-900 px-3 py-1.5 rounded hover:bg-gray-800 transition text-sm"
-          >
-            <Globe className="w-4 h-4" /> Ver Projeto
-          </a>
-          <a
-            href="https://github.com/saulojustiniano1"
-            target="_blank"
-            className="inline-flex items-center gap-2 text-gray-800 hover:text-black"
-          >
-            <Github className="w-6 h-6" />
-          </a>
+      </div>
+
+      <div className="p-5">
+        <h3 className="font-display text-lg font-bold text-gray-900 mb-2">{nome}</h3>
+        <p className="text-gray-500 mb-4 text-sm leading-relaxed">{descricao}</p>
+
+        <div className="flex flex-wrap gap-2">
+          <span className="flex items-center gap-1.5 text-xs bg-gray-900 text-white px-2.5 py-1 rounded-full font-medium">
+            <Image src={linguagem.icone} alt={linguagem.nome} width={11} height={11} />
+            {linguagem.nome}
+          </span>
+          {ferramentas.map((f) => (
+            <span
+              key={f.nome}
+              className="flex items-center gap-1.5 text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full"
+            >
+              <Image src={f.icone} alt={f.nome} width={11} height={11} />
+              {f.nome}
+            </span>
+          ))}
         </div>
       </div>
     </div>

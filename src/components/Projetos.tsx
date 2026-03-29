@@ -23,10 +23,13 @@ export default function Projetos() {
       className="bg-white py-20 px-6 md:px-28 scroll-mt-20"
     >
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-          <span className="text-primary">Projetos</span>
+        <p className="font-mono text-xs text-blue-700 tracking-widest uppercase mb-2">
+          03 — portfólio
+        </p>
+        <h2 className="font-display text-3xl font-bold text-gray-900">
+          Projetos
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+        <p className="text-gray-500 mt-2 text-sm">
           Projetos que desenvolvi e tecnologias que utilizei.
         </p>
       </div>

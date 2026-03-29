@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Syne } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
@@ -12,9 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const syne = Syne({
+  variable: '--font-syne',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+});
+
 export const metadata: Metadata = {
-  title: 'Saulo Justiniano',
-  description: 'Site pessoal de Saulo Justiniano, estudante de programação',
+  title: 'Saulo Justiniano — Software Developer',
+  description:
+    'Desenvolvedor de software especializado em React, Next.js e Node.js. Criando soluções digitais de alto impacto.',
 };
 
 export default function RootLayout({
@@ -23,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} antialiased`}
       >
         {children}
       </body>
